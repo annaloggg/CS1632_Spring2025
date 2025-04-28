@@ -9,8 +9,10 @@ int main(int argc, char **argv)
         return 0;
     }
     char *str = argv[1];
-    char buf[5];
-    strcpy(buf, str);
+    char buf[5]; //change from fixed size buffer
+    // char* buf;
+    strncpy(buf, str, 4);
+    buf[4] = '\0';
     printf("%s\n", buf);
     return 0;
 }
